@@ -1,0 +1,41 @@
+$black: #000;
+$error: #c41515;
+
+.header {
+  color: $black;
+  text-align: center;
+  margin-bottom: 1rem;
+  &__section {
+    position: relative;
+  }
+  &__pin {
+    position: absolute;
+    top: 7.5px;
+    left: 5px;
+  }
+  &__search {
+    position: absolute;
+    top: 7.5px;
+    right: 5px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  }
+  &__input {
+    font-size: 13px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: $black;
+    width: 100%;
+    text-transform: uppercase;
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 29px;
+  }
+
+  &__error {
+    color: $error;
+  }
+}

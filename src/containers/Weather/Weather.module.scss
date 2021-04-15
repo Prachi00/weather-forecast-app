@@ -1,0 +1,8 @@
+.weather {
+  margin: 0 auto;
+  width: 40%;
+
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+  }
+}

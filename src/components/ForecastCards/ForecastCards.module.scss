@@ -1,0 +1,81 @@
+$black: #000;
+$card: #fff;
+$text: #3f51d1;
+.cards {
+  width: 100%;
+  color: $black;
+
+  &__tile {
+    min-height: 100px;
+    background: $card;
+    margin: 3px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 12px;
+  }
+
+  &__info {
+    display: flex;
+    pointer-events: none;
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &__weather {
+    padding: 0 0 0 15px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: center;
+    &__text {
+      padding: 10px 10px;
+      font-size: 20px;
+      color: $text;
+    }
+    &__more-text {
+      padding: 0 10px;
+      font-size: 12px;
+    }
+  }
+
+  &__detailed {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.2s ease-in;
+    -moz-transition: height 0.2s ease-in;
+    -o-transition: height 0.2s ease-in;
+    transition: height 0.2s ease-in;
+    :after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 10px;
+      top: 48px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid $black;
+    }
+  }
+}
+
+.expanded {
+  height: 100px;
+  :after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $black;
+    border-top: none;
+  }
+}
